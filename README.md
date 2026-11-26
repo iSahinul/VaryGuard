@@ -2,6 +2,8 @@
 
 **One URL, two variants, one cache — without the wrong variant ever reaching the wrong reader.**
 
+![How VaryGuard works: without it, the first cached variant is served to everyone; with it, browsers keep the cached HTML and markdown requests bypass the cache](assets/how-it-works.svg)
+
 If your WordPress site negotiates content by the `Accept` header — HTML for browsers, `text/markdown` for AI agents — a full-page cache will happily store whichever variant arrives first and serve that same copy to everyone. A browser gets raw markdown, or an agent gets a cached HTML page, and the bug only appears *after* the cache is warm, which is why it survives first-hit testing.
 
 VaryGuard is a single-file must-use plugin that guards the cache layer:
