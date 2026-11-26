@@ -18,7 +18,7 @@ which half is broken, and some sites do not negotiate at all.
 Run:
 
 ```sh
-test/diagnose.sh <page-url>
+tests/diagnose.sh <page-url>
 ```
 
 It compares origin bodies (cache bypassed) against warm-cache bodies and
@@ -60,11 +60,11 @@ site's cache wholesale as a "fix".
 
 ## Phase 3 — Verify
 
-Re-run `test/diagnose.sh <page-url>`. Then, for a stricter check, pick a
+Re-run `tests/diagnose.sh <page-url>`. Then, for a stricter check, pick a
 string that appears only in the markdown variant and run Ramil's test:
 
 ```sh
-test/warmed-cache-test.sh <page-url> "<markdown-only marker>"
+tests/warmed-cache-test.sh <page-url> "<markdown-only marker>"
 ```
 
 Report exactly four lines:

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="VaryGuard — one URL, two variants, one cache, kept separate">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12181a"/>
+      <stop offset="1" stop-color="#1d2a24"/>
+    </linearGradient>
+    <linearGradient id="tag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4cc27e"/>
+      <stop offset="1" stop-color="#2b7a4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <circle cx="1085" cy="60" r="150" fill="#4cc27e" opacity="0.08"/>
+  <circle cx="90" cy="380" r="120" fill="#4cc27e" opacity="0.06"/>
+  <rect x="70" y="118" width="86" height="10" rx="5" fill="url(#tag)"/>
+  <text x="70" y="215" font-family="Verdana, Arial, sans-serif" font-size="86" font-weight="bold" fill="#ffffff">VaryGuard</text>
+  <text x="70" y="272" font-family="Verdana, Arial, sans-serif" font-size="30" fill="#cfe8d8">One URL. Two variants. One cache &#8212; kept separate.</text>
+  <text x="70" y="322" font-family="Verdana, Arial, sans-serif" font-size="20" fill="#8fa89a">HTML for browsers &#183; text/markdown for AI agents &#183; no cross-contamination</text>
+  <rect x="70" y="348" width="300" height="34" rx="17" fill="none" stroke="#4cc27e" stroke-width="1.5"/>
+  <text x="220" y="371" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#4cc27e">ONE MUST-USE PLUGIN FILE</text>
+</svg>

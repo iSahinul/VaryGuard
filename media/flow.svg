@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 560" font-family="Verdana, Arial, sans-serif">
+  <text x="620" y="42" text-anchor="middle" font-size="29" font-weight="bold" fill="#1a1a1a">One URL &#183; Two variants &#183; One cache</text>
+
+  <!-- LEFT PANEL -->
+  <rect x="20" y="70" width="590" height="420" rx="14" fill="#FDECEC" stroke="#E0A0A0" stroke-width="2"/>
+  <text x="315" y="112" text-anchor="middle" font-size="21" font-weight="bold" fill="#A12626">&#10007; WITHOUT VARYGUARD</text>
+
+  <text x="50" y="162" font-size="18" fill="#333">Browser &#8594; GET /page/</text>
+  <rect x="50" y="178" width="530" height="52" rx="8" fill="#FFFFFF" stroke="#E0A0A0" stroke-width="1.5"/>
+  <text x="315" y="211" text-anchor="middle" font-size="18" fill="#333">Page cache stores the HTML copy</text>
+
+  <text x="50" y="272" font-size="18" fill="#333">AI agent &#8594; GET /page/ (Accept: text/markdown)</text>
+  <rect x="50" y="288" width="530" height="52" rx="8" fill="#FFFFFF" stroke="#E0A0A0" stroke-width="1.5"/>
+  <text x="315" y="321" text-anchor="middle" font-size="18" fill="#333">Cache serves that same HTML copy</text>
+
+  <text x="315" y="392" text-anchor="middle" font-size="21" font-weight="bold" fill="#A12626">&#10007; Agent gets HTML, not markdown</text>
+  <text x="315" y="432" text-anchor="middle" font-size="15.5" fill="#666">First hit wins &#8212; whoever asks first poisons</text>
+  <text x="315" y="456" text-anchor="middle" font-size="15.5" fill="#666">the cache for the other. (And the reverse hurts browsers.)</text>
+
+  <!-- RIGHT PANEL -->
+  <rect x="630" y="70" width="590" height="420" rx="14" fill="#EAF7EE" stroke="#93CFA2" stroke-width="2"/>
+  <text x="925" y="112" text-anchor="middle" font-size="21" font-weight="bold" fill="#1E7A34">&#10003; WITH VARYGUARD</text>
+
+  <text x="660" y="162" font-size="18" fill="#333">Browser &#8594; GET /page/</text>
+  <rect x="660" y="178" width="530" height="52" rx="8" fill="#FFFFFF" stroke="#93CFA2" stroke-width="1.5"/>
+  <text x="925" y="211" text-anchor="middle" font-size="18" fill="#333">HTML cached normally &#10003;</text>
+
+  <text x="660" y="272" font-size="18" fill="#333">AI agent &#8594; GET /page/ (Accept: text/markdown)</text>
+  <rect x="660" y="288" width="530" height="52" rx="8" fill="#FFFFFF" stroke="#93CFA2" stroke-width="1.5"/>
+  <text x="925" y="321" text-anchor="middle" font-size="18" fill="#333">Markdown bypasses the cache &#8594; fresh markdown &#10003;</text>
+
+  <text x="925" y="392" text-anchor="middle" font-size="21" font-weight="bold" fill="#1E7A34">&#10003; Each reader gets its own variant</text>
+  <text x="925" y="432" text-anchor="middle" font-size="15.5" fill="#666">Vary: Accept keeps cache entries separate;</text>
+  <text x="925" y="456" text-anchor="middle" font-size="15.5" fill="#666">browsers keep full page caching.</text>
+
+  <text x="620" y="532" text-anchor="middle" font-size="16" fill="#444">VaryGuard &#8212; one must-use plugin file. No settings screen, no database writes.</text>
+</svg>
