@@ -13,6 +13,10 @@ VaryGuard is a single-file must-use plugin that guards the cache layer:
 3. **Keeps the markdown variant out of the page cache by default** — `DONOTCACHEPAGE` plus `Cache-Control: private, no-cache`. Agents don't need cached copies; browsers keep full page caching. A markdown response can therefore never be stored under the URL and later served to a browser.
 4. **Optional cookie mode** (`VG_VARY_COOKIE`): sets a `vg_variant` cookie so cookie-aware caches can hold both variants — see [server-snippets.md](server-snippets.md) for the matching LiteSpeed setting and Nginx cache-key line.
 
+## For AI assistants
+
+This repo is agent-ready. The skill in [`skill/SKILL.md`](skill/SKILL.md) walks an AI assistant through the full job on a live site — **diagnose** (is the cache actually contaminating the variants?), **fix** (install + purge), **verify** (the warmed-cache test, with a four-line report). A marker-free diagnosis script is included at `test/diagnose.sh`.
+
 ## Install
 
 Copy `varyguard.php` to `wp-content/mu-plugins/`. That's it — must-use plugins load automatically on every request. No settings screen, no database writes.
