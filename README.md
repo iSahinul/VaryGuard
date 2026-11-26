@@ -17,6 +17,22 @@ VaryGuard is a single-file must-use plugin that guards the cache layer:
 
 This repo is agent-ready. The skill in [`skill/SKILL.md`](skill/SKILL.md) walks an AI assistant through the full job on a live site — **diagnose** (is the cache actually contaminating the variants?), **fix** (install + purge), **verify** (the warmed-cache test, with a four-line report). A marker-free diagnosis script is included at `test/diagnose.sh`.
 
+**Give your AI assistant this prompt:**
+
+```text
+My WordPress site serves HTML to browsers and text/markdown to AI agents
+by the Accept header, behind a full-page cache. Use the VaryGuard skill
+from https://github.com/iSahinul/VaryGuard (skill/SKILL.md) on this page:
+<PASTE YOUR PAGE URL>
+
+Diagnose first: run test/diagnose.sh and tell me the verdict before
+changing anything. If the cache is contaminating the variants, install
+the must-use plugin, purge the cache once, and verify with the
+warmed-cache test. Report in the skill's four-line format, and state
+honestly if my cache serves pages before PHP and needs the server
+snippet instead.
+```
+
 ## Install
 
 Copy `varyguard.php` to `wp-content/mu-plugins/`. That's it — must-use plugins load automatically on every request. No settings screen, no database writes.
