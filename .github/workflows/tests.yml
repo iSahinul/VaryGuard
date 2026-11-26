@@ -1,0 +1,17 @@
+name: lint
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  php-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+      - name: Lint the plugin
+        run: php -l varyguard.php
+      - name: Syntax-check the test scripts
+        run: bash -n tests/diagnose.sh tests/warmed-cache-test.sh
